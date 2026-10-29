@@ -1,0 +1,83 @@
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# ---------- Test / tooling caches ----------
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.tox/
+
+# ---------- Secrets and credentials (never commit) ----------
+# Real per-environment config and secrets stay local. Commit only the *.example files.
+.env
+.env.*
+!.env.example
+config/*.local.*
+config/secrets/
+secrets/
+*.pem
+*.key
+*.p12
+# GCP service-account key files for the backup bucket
+*service-account*.json
+*credentials*.json
+# SSH keys used for Hellbender access
+id_rsa*
+id_ed25519*
+
+# ---------- Data (large, regenerable, or downloaded) ----------
+# Raw CFPB extract, curated Parquet, aggregated query outputs
+data/
+*.csv
+*.parquet
+aggregated_*.parquet
+# Handoff payloads and envelopes pulled down from the cluster
+handoff/
+# Backup staging output
+backups/
+
+# ---------- Spark artifacts ----------
+spark-warehouse/
+metastore_db/
+derby.log
+spark-events/
+*.crc
+.spark-local-dir/
+
+# ---------- Slurm / Hellbender job output ----------
+slurm-*.out
+slurm-*.err
+
+# ---------- Docker / Postgres local state ----------
+docker-compose.override.yml
+pgdata/
+postgres-data/
+
+# ---------- Streamlit ----------
+.streamlit/secrets.toml
+
+# ---------- IDE / editor ----------
+.idea/
+.vscode/*
+!.vscode/settings.json.example
+*.swp
+*.swo
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- Claude Code local state ----------
+.claude/settings.local.json
