@@ -1,0 +1,8 @@
+# Single source of truth for the PySpark / Spark / Hadoop version pair.
+# Re-pin by editing this file only; no code change is required.
+#
+# Hadoop 3.4.0 alongside Spark 3.5.x is intentional: it is the cluster module
+# version. The pair is unverified until first cluster login.
+pyspark = "3.5.1"
+spark = "3.5.1"
+hadoop = "3.4.0"
